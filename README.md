@@ -1,4 +1,3 @@
-[README_PROFESSIONAL.md](https://github.com/user-attachments/files/34015502/README_PROFESSIONAL.md)
 # Microsoft Financial Performance Analysis | Power BI
 
 **An executive-style Power BI portfolio project analyzing Microsoft’s FY2023–FY2025 financial performance across profitability, business segments, and cash flow.**
