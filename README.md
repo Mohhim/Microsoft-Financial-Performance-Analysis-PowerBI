@@ -1,70 +1,113 @@
-[README (1).md](https://github.com/user-attachments/files/34015304/README.1.md)
+[README_PROFESSIONAL.md](https://github.com/user-attachments/files/34015502/README_PROFESSIONAL.md)
 # Microsoft Financial Performance Analysis | Power BI
 
-An interactive Power BI financial analytics portfolio project exploring Microsoft’s financial performance across fiscal years **FY2023–FY2025**. The report covers revenue growth, profitability, business segment performance, and cash flow trends.
+**An executive-style Power BI portfolio project analyzing Microsoft’s FY2023–FY2025 financial performance across profitability, business segments, and cash flow.**
 
-> **Portfolio project disclaimer:** This is an independent educational analysis, not an official Microsoft dashboard. Financial figures should be reconciled against Microsoft’s published annual reports before being used for financial decisions.
+> **Independent portfolio project.** Not affiliated with or endorsed by Microsoft. Financial figures are based on publicly reported company results; this dashboard is for analytical demonstration, not investment advice. Fiscal years refer to Microsoft’s reporting years, not calendar years.
 
-## Project Overview
+## Project at a Glance
 
-This dashboard turns financial statement and segment data into a concise, executive-focused view of business performance. It combines a fiscal-year dimension, three fact tables, DAX measures, and interactive reporting.
+| | |
+|---|---|
+| **Period** | FY2023–FY2025 |
+| **Tool** | Microsoft Power BI Desktop |
+| **Data** | Financial statements, business segment results, cash flow |
+| **Model** | Fiscal-year dimension connected to three fact tables |
+| **Deliverable** | Four interactive report pages and a Power BI (`.pbix`) file |
 
-### Dashboard Pages
+## Business Questions
 
-1. **Executive Overview** — headline financial KPIs, multi-year trends, and segment revenue contribution.
-2. **Revenue & Profitability Analysis** — revenue growth, gross profit, net income, and profitability margins.
-3. **Business Segment Analysis** — segment revenue, operating income, growth, and operating margins.
-4. **Cash Flow Analysis** — operating cash flow, capital expenditure, free cash flow, and cash conversion.
+This report was designed to answer five executive-level questions:
 
-## Key Financial Findings
+1. How have revenue, operating income, and net income changed across the three fiscal years?
+2. Are profitability margins improving alongside revenue growth?
+3. Which business segments contribute the most revenue and show the strongest growth?
+4. How are operating cash flow and capital expenditures evolving?
+5. Is free cash flow keeping pace with operating cash generation?
 
-- FY2025 revenue: **$281.72 billion**.
-- FY2025 net income: **$101.83 billion**.
-- FY2025 operating income: **$128.53 billion**.
-- FY2025 net profit margin: **36.15%**.
-- FY2025 Intelligent Cloud revenue year-over-year growth: **21.50%**.
-- FY2025 operating cash flow: **$136.16 billion**.
-- FY2025 capital expenditure: **$64.55 billion**.
-- FY2025 free cash flow (operating cash flow minus capital expenditure): **$71.61 billion**.
-
-**Units:** Source financial amounts are in USD millions; dashboard headline amounts are presented in USD billions.
-
-## Dashboard Screenshots
+## Dashboard Gallery
 
 ### 1. Executive Overview
-![Executive Overview](Screenshots/Executive_Overview.PNG)
+
+Financial KPIs, revenue and income trends, margin trends, and business segment contribution.
+
+![Executive Overview dashboard](Screenshots/Executive_Overview.PNG)
 
 ### 2. Revenue & Profitability Analysis
-![Revenue and Profitability Analysis](Screenshots/Revenue_Profitability.PNG)
+
+Revenue growth, gross profit, net income, and profitability trends across FY2023–FY2025.
+
+![Revenue and Profitability dashboard](Screenshots/Revenue_Profitability.PNG)
 
 ### 3. Business Segment Analysis
-![Business Segment Analysis](Screenshots/Business_Segments.PNG)
+
+Segment-level revenue, operating margins, year-over-year growth, and multi-year performance.
+
+![Business Segment Analysis dashboard](Screenshots/Business_Segments.PNG)
 
 ### 4. Cash Flow Analysis
-![Cash Flow Analysis](Screenshots/Cash_Flow.PNG)
+
+Operating cash flow, capital expenditure, free cash flow, and cash conversion trends.
+
+![Cash Flow Analysis dashboard](Screenshots/Cash_Flow.PNG)
 
 ### 5. Data Model
-![Power BI Data Model](Screenshots/Data_Model.PNG)
 
-## Data Model
+![Power BI relationship model](Screenshots/Data_Model.PNG)
 
-A fiscal-year dimension (`Dim_FiscalYear`) connects to three fact tables using one-to-many relationships:
+## Selected Financial Insights
 
-- `Fact_IncomeStatement`
-- `Fact_Segments`
-- `Fact_CashFlow`
+| Metric | FY2025 result |
+|---|---:|
+| Revenue | **$281.72B** |
+| Operating income | **$128.53B** |
+| Net income | **$101.83B** |
+| Net profit margin | **36.15%** |
+| Operating cash flow | **$136.16B** |
+| Capital expenditure | **$64.55B** |
+| Free cash flow | **$71.61B** |
 
-DAX measures calculate financial totals, margins, year-over-year changes, and cash flow indicators. Fiscal-year filters drive relevant KPI cards and segment comparisons while multi-year trend charts retain historical context.
+- **Revenue expansion:** Revenue increased from **$211.92B in FY2023** to **$281.72B in FY2025** (approximately **32.94%** over the period).
+- **Profitability:** Operating margin increased from approximately **41.77%** in FY2023 to **45.62%** in FY2025, an increase of about **3.85 percentage points**.
+- **Segment momentum:** Intelligent Cloud recorded approximately **21.50%** year-over-year revenue growth in FY2025, the fastest among the three reported segments.
+- **Cash flow trade-off:** FY2025 operating cash flow reached **$136.16B**, while capital expenditure reached **$64.55B**. Free cash flow was **$71.61B**, approximately **3.32% lower** than FY2024.
 
-## Technologies & Skills
+**Units:** Underlying CSV financial values are expressed in **USD millions**; headline dashboard KPIs are shown in **USD billions**. Percentages are rounded.
 
-- Microsoft Power BI Desktop
-- Power Query and data modeling
-- DAX measures and time-based comparisons
-- Financial statement analysis and KPI design
-- Data visualization and dashboard storytelling
+## Data & Modeling Approach
 
-## Repository Contents
+The project uses a simple analytical model with a shared fiscal-year dimension:
+
+- `Dim_FiscalYear` — fiscal-year lookup table.
+- `Fact_IncomeStatement` — income statement metrics by fiscal year.
+- `Fact_Segments` — business segment revenue, costs, and operating income.
+- `Fact_CashFlow` — operating, investing, and financing cash flow metrics, including capital expenditure.
+
+The fiscal-year dimension has **one-to-many, single-direction relationships** to the three fact tables. Financial measures are calculated using DAX rather than relying on raw totals in every visual.
+
+### Key calculations
+
+| KPI | Business definition |
+|---|---|
+| Gross profit margin | Gross profit / revenue |
+| Operating margin | Operating income / revenue |
+| Net profit margin | Net income / revenue |
+| Revenue YoY growth | (Current-year revenue − prior-year revenue) / prior-year revenue |
+| Segment operating margin | Segment operating income / segment revenue |
+| Free cash flow | Operating cash flow − capital expenditure |
+| Cash conversion ratio | Operating cash flow / net income |
+
+The first available fiscal year has no preceding year in the dataset, so year-over-year measures for FY2023 are intentionally blank.
+
+### Report interaction design
+
+The fiscal-year slicer filters relevant KPI cards and segment comparisons. Multi-year trend charts retain the FY2023–FY2025 context, enabling comparisons without losing historical trends. Two internal validation pages were used during development and are hidden from normal report navigation.
+
+## Tools & Skills Demonstrated
+
+**Power BI Desktop · Power Query · Star-schema modeling · DAX · Financial KPI analysis · YoY comparisons · Data visualization · Executive reporting**
+
+## Repository Structure
 
 ```text
 Microsoft-Financial-Performance-Analysis-PowerBI/
@@ -85,20 +128,25 @@ Microsoft-Financial-Performance-Analysis-PowerBI/
     └── Data_Model.PNG
 ```
 
-## How to Explore
+## How to Run
 
-1. Download [`Microsoft_Financial_Performance_Analysis.pbix`](Microsoft_Financial_Performance_Analysis.pbix).
-2. Open it with Microsoft Power BI Desktop.
-3. Explore the four dashboard pages and change the fiscal-year slicer to compare annual KPIs.
-4. If Power BI prompts for data source paths, point the queries to the files in [`Data/`](Data/).
+1. Download the [Power BI report](Microsoft_Financial_Performance_Analysis.pbix) and the files in the [`Data`](Data/) folder.
+2. Open the `.pbix` file in **Power BI Desktop**.
+3. If prompted about file locations, update the Power Query data source paths to the downloaded CSV files.
+4. Select **Refresh** and explore the four visible report pages.
+5. Change the fiscal-year slicer to compare selected-year metrics; use the trend charts for multi-year context.
 
-## Data Sources & References
+## Data Provenance & Limitations
 
-The dataset is based on Microsoft’s publicly reported financial results for fiscal years 2023–2025. For independent verification, refer to Microsoft’s official annual reporting resources:
+The CSV tables organize publicly reported Microsoft financial data for **FY2023–FY2025** into an analysis-friendly structure. The data is **not a Microsoft-provided Power BI dataset**, and this repository does not represent an official Microsoft reporting product.
+
+Official reference points:
 
 - [Microsoft Investor Relations — Annual Reports](https://www.microsoft.com/en-us/Investor/annual-reports.aspx)
 - [Microsoft Investor Relations](https://www.microsoft.com/en-us/Investor/)
 
+**Interpretation notes:** The analysis covers three annual observations only, uses rounded display values, and does not include balance-sheet ratios, market valuation, or forward-looking forecasts. Year-over-year comparisons should be interpreted within that scope.
+
 ## Author
 
-[Mohhim](https://github.com/Mohhim) — Power BI / Data Analytics Portfolio
+**[Mohhim](https://github.com/Mohhim)** — Data Analytics & Business Intelligence Portfolio
