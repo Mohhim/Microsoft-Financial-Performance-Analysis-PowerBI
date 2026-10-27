@@ -1,7 +1,5 @@
 # Microsoft-Financial-Performance-Analysis-PowerBI
 Microsoft financial performance analysis using Power BI, DAX, and financial reporting data (FY2023–FY2025).
-[README.md](https://github.com/user-attachments/files/34009595/README.md)
-# Microsoft Financial Performance Analysis | Power BI
 
 An interactive Power BI portfolio project analyzing **Microsoft's financial performance across FY2023–FY2025**, using figures from published annual financial statements. The report focuses on profitability, business segments, growth, cash generation, and capital expenditure.
 
